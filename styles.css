@@ -1,0 +1,23 @@
+.block {
+    display: flex;
+    width: 500px
+}
+
+.block__square {
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+}
+
+.block__square-red {
+    background-color: darkred;
+}
+
+.block__square-blue {
+    background-color: cornflowerblue;
+}
+
+.block__square-pink {
+    background-color: lightpink;
+}
+

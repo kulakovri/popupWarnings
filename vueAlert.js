@@ -4,16 +4,21 @@ const vueAlert = function() {
       const MyComponent = Vue.extend({
         template: `
 <div>
-    <h1>Errors</h1>
-    <li v-for="error in errors""> {{ error }}</li>
+    <h1>Message</h1>
+    <li v-for="message in listOfMessages"> {{ message }}</li>
+    <br>
+    <input v-model="inputMessage">
+    <button @click="addAnotherMessage">Add another message</button>
 </div>`,
-        methods: {
-
-        },
         data() {
           return {
-            rows: [1, 2, 3, 4],
-            errors: ['error 1', "error 2", "error 3",  "error 4",  "error 5"]
+            listOfMessages: ['message 1', "message 2", "message 3",  "message 4",  "message 5"],
+            inputMessage: ""
+          }
+        },
+        methods: {
+          addAnotherMessage() {
+            this.listOfMessages.push(this.inputMessage)
           }
         }
       })
